@@ -1,6 +1,6 @@
 Box.destroy_all
 Room.destroy_all
-Item.destroy_all 
+Item.destroy_all
 
 kitchen = Room.create(name: "Kitchen")
 office = Room.create(name: "Office")
