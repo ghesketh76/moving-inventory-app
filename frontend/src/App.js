@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import RoomsContainer from './components/RoomsContainer'
+
 const roomsURL = 'http://localhost:3000/rooms'
 
 class App extends Component {
@@ -15,15 +17,11 @@ class App extends Component {
       .then(rooms => this.setState({rooms}))
   }
 
-  renderRoomName = () => {
-    this.state.rooms.map(room => console.log())
-  }
-
   render(){
     return (
       <div className="App">
         <h1>Moving App</h1>
-        {this.renderRoomName()}
+        <RoomsContainer rooms={this.state.rooms}/>
       </div>
     );
   }

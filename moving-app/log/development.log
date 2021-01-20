@@ -635,3 +635,91 @@ Processing by RoomsController#index as */*
 Completed 200 OK in 85ms (Views: 83.8ms | ActiveRecord: 1.1ms | Allocations: 8964)
 
 
+Started GET "/rooms" for ::1 at 2021-01-20 13:36:14 -0700
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (0.8ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 11]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 12]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 13]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 14]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 15]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+Completed 200 OK in 160ms (Views: 133.9ms | ActiveRecord: 12.0ms | Allocations: 22745)
+
+
+Started GET "/rooms" for ::1 at 2021-01-20 13:37:48 -0700
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 11]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 12]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 13]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 14]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 15]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.9ms | Allocations: 8979)
+
+
+Started GET "/rooms" for ::1 at 2021-01-20 13:37:49 -0700
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (0.1ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 11]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 12]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 13]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 14]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 15]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 1.2ms | Allocations: 8979)
+
+
+Started GET "/rooms" for ::1 at 2021-01-20 13:54:11 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 11]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 12]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 13]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 14]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 15]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 2.3ms | Allocations: 9004)
+
+
+Started GET "/rooms" for ::1 at 2021-01-20 13:55:54 -0700
+Processing by RoomsController#index as */*
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms"[0m
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 11]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 12]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 13]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 14]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+  [1m[36mItem Load (0.1ms)[0m  [1m[34mSELECT "items".* FROM "items" INNER JOIN "boxes" ON "items"."id" = "boxes"."item_id" WHERE "boxes"."room_id" = ?[0m  [["room_id", 15]]
+  ↳ app/controllers/rooms_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 1.0ms | Allocations: 8961)
+
+
