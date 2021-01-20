@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const roomsURL = 'http://localhost:3000/rooms'
+
+class App extends Component {
+
+  state = {
+    rooms: []
+  }
+
+  componentDidMount(){
+    fetch(roomsURL)
+      .then(response => response.json())
+      .then(rooms => this.setState({rooms}))
+  }
+
+  renderRoomName = () => {
+    this.state.rooms.map(room => console.log())
+  }
+
+  render(){
+    return (
+      <div className="App">
+        <h1>Moving App</h1>
+        {this.renderRoomName()}
+      </div>
+    );
+  }
 }
 
 export default App;
