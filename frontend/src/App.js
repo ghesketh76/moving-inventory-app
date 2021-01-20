@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 import './App.css';
 
-import RoomsContainer from './components/RoomsContainer'
-
-const roomsURL = 'http://localhost:3000/rooms'
+import RoomsContainer from './components/RoomsContainer';
+import Kitchen from './components/Kitchen';
+import Office from './components/Office';
+import Bathroom from './components/Bathroom';
+import Bedroom from './components/Bedroom';
+import LivingRoom from './components/LivingRoom'
 
 class App extends Component {
-
-  state = {
-    rooms: []
-  }
-
-  componentDidMount(){
-    fetch(roomsURL)
-      .then(response => response.json())
-      .then(rooms => this.setState({rooms}))
-  }
-
   render(){
     return (
       <div className="App">
-        <h1>Moving App</h1>
-        <RoomsContainer rooms={this.state.rooms}/>
+        <Route exact path='/' component={RoomsContainer} />
+        <Route path='/kitchen' component={Kitchen}/>
+        <Route path='/office' component={Office}/>
+        <Route path='/bathroom' component={Bathroom}/>
+        <Route path='/bedroom' component={Bedroom}/>
+        <Route path='/livingroom' component={LivingRoom}/>
       </div>
     );
   }
