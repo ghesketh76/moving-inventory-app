@@ -2,12 +2,12 @@ class RoomsController < ApplicationController
 
     def index 
         @rooms = Room.all 
-        render json: @rooms
+        render json: @rooms, include: :items
     end
 
     def show 
         @room = Room.find(params[:id])
-        render json: @room
+        render json: @room, include: :items
     end
 
     def create 
