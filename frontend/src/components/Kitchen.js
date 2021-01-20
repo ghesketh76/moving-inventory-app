@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ItemsContainer from "./ItemsContainer";
 
 const kitchenURL = 'http://localhost:3000/rooms/16'
 
@@ -16,7 +17,10 @@ export default class Kitchen extends Component {
 
     render(){
         return(
-            <h1>Kitchen Items</h1>
+            <div className='room-items-page'>
+                <h1>Kitchen Items</h1>
+                <ItemsContainer items={this.state.kitchenItems}/>
+            </div>
         )
     }
 }

@@ -18,7 +18,7 @@ class App extends Component {
         <Route path='/office' component={Office}/>
         <Route path='/bathroom' component={Bathroom}/>
         <Route path='/bedroom' component={Bedroom}/>
-        <Route path='/livingroom' component={LivingRoom}/>
+        <Route path='/living room' component={LivingRoom}/>
       </div>
     );
   }
