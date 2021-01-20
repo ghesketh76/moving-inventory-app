@@ -1,4 +1,5 @@
 import { Component } from "react";
+import ItemsContainer from './ItemsContainer'
 
 const bathroomURL = 'http://localhost:3000/rooms/18'
 
@@ -16,7 +17,10 @@ export default class Bathroom extends Component {
 
     render(){
         return(
-            <h1>Bathroom Items</h1>
+            <div className='room-items-page'>
+                <h1>Bathroom Items</h1>
+                <ItemsContainer items={this.state.bathroomItems}/>
+            </div>
         )
     }
 }
