@@ -18,9 +18,9 @@ export default class Kitchen extends Component {
     render(){
         return(
             <div className='room-items-page'>
-            <h1>Kitchen Items</h1>
-            <ItemsContainer items={this.state.kitchenItems}/>
-        </div>
+                <h1>Kitchen Items</h1>
+                <ItemsContainer items={this.state.kitchenItems}/>
+            </div>
         )
     }
 }
