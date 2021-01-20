@@ -2,12 +2,12 @@ class ItemsController < ApplicationController
 
     def index 
         @items = Item.all 
-        render json: @items, inlcude: :room
+        render json: @items, inlcude: :rooms
     end
 
     def show 
         @item = Item.find(params[:id])
-        render json: @item, include: :room
+        render json: @item, include: :rooms
     end
 
     def create 
