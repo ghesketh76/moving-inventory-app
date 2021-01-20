@@ -1,5 +1,7 @@
-.room-card {
+.card-holder {
+    margin: auto;
     border: 1px solid;
     height: 100px;
-    justify-content: space-around;
+    width: 500px;
+    text-align: center;
 }
